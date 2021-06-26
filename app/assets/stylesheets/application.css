@@ -1,0 +1,155 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ /*ハンバーガーバー*/
+ nav {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: -300px;
+    bottom: 0;
+    width: 300px;
+    background: #00A7A8;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    transition: all .5s;
+    z-index: 3;
+    opacity: 0;
+  }
+  .open nav {
+    left: 0;
+    opacity: 1;
+  }
+  nav .inner {
+    padding: 25px;
+  }
+  nav .inner ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  nav .inner ul li {
+    position: relative;
+    margin: 0;
+    border-bottom: 1px solid black;
+  }
+  nav .inner ul li a {
+    display: block;
+    color: black;
+    font-size: 14px;
+    padding: 1em;
+    text-decoration: none;
+    transition-duration: 0.2s;
+  }
+  nav .inner ul li a:hover {
+    background-color: rgb(255, 245, 231);
+  }
+  /*============
+  .toggle_btn
+  =============*/
+  .toggle_btn {
+    display: block;
+    position: fixed;
+    top: 30px;
+    left: 30px;
+    width: 30px;
+    height: 30px;
+    transition: all .5s;
+    cursor: pointer;
+    z-index: 3;
+  }
+  .open .toggle_btn {
+    left: 330px;
+  }
+  .toggle_btn span {
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 30px;
+    height: 2px;
+    background-color: black;
+    border-radius: 4px;
+    transition: all .5s;
+  }
+  .toggle_btn span:nth-child(1) {
+    top: 4px;
+  }
+  .toggle_btn span:nth-child(2) {
+    top: 14px;
+  }
+  .toggle_btn span:nth-child(3) {
+    bottom: 4px;
+  }
+  .open .toggle_btn span {
+    background-color: #fff;
+  }
+  .open .toggle_btn {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+  .open .toggle_btn span:nth-child(1), .open .toggle_btn span:nth-child(3) {
+    width: 16px;
+  }
+  .open .toggle_btn span:nth-child(1) {
+    -webkit-transform: translate(-1px,4px) rotate(-45deg);
+    transform: translate(-1px,4px) rotate(-45deg);
+  }
+  .open .toggle_btn span:nth-child(3) {
+    -webkit-transform: translate(-1px,-4px) rotate(45deg);
+    transform: translate(-1px,-4px) rotate(45deg);
+  }
+  
+  /*============
+  #mask
+  =============*/
+  #mask {
+    display: none;
+    transition: all .5s;
+  }
+  .open #mask {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #00B6BE;
+    opacity: .8;
+    z-index: 2;
+    cursor: pointer;
+  }
+  /*============
+  main
+  =============*/
+  main {
+    width: 100%;
+    padding: 50px 0;
+    transition: all .5s;
+  }
+  .open main {
+    margin-left: 300px;
+  }
+  main h1 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    text-align: center;
+  }
+  /*ハンバーガーバー終わり*/
+
+  body{
+      background-color: #00B6BE;
+  }

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Playback</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script type="text/javascript" src="app\javascript\packs\menu.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <div class="head">
+        <div class="logo">
+          <span>aaa</span>
+        </div>
+      </div>
+
+      <div id="navArea">
+        <nav>
+          <div class="inner">
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Top artists</a></li>
+              <li><a href="#">Top tracks</a></li>
+              <li><a href="#">Top genre</a></li>
+            </ul>
+          </div>
+        </nav>
+
+        <div class="toggle_btn">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        
+        <div id="mask"></div>
+      </div>
+      <script>
+         (function($) {
+  var $body   = $('body');
+  var $btn   = $('.toggle_btn');
+  var $mask  = $('#mask');
+  var open   = 'open'; // class
+  // menu open close
+  $btn.on( 'click', function() {
+    if ( ! $body.hasClass( open ) ) {
+      $body.addClass( open );
+    } else {
+      $body.removeClass( open );
+    }
+  });
+  // mask close
+  $mask.on('click', function() {
+    $body.removeClass( open );
+  });
+} )(jQuery);
+      </script>
+    </header>
+    <%= yield %>
+  </body>
+</html>

@@ -1,24 +1,13 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+<h3>Overview</h3>
+This app ranks songs, artists and genres you've heard on spotify.<br>
+You need a spotify account to use the app.
 
-Things you may want to cover:
+<h3>Ruby version</h3>
+ruby 2.7.3<br>
+Rails 6.1.3.2
 
-* Ruby version
+<h3>Remarks</h3>
+https://www.spotify.com/jp/
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...

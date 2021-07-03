@@ -127,8 +127,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: #00B6BE;
-    opacity: .8;
+    opacity: 0.8;
     z-index: 2;
     cursor: pointer;
   }
@@ -151,5 +150,26 @@
   /*ハンバーガーバー終わり*/
 
   body{
-      background-color: #00B6BE;
+      background-color: white;
   }
+
+
+.title{
+    margin: 3em 38%;
+    border: solid #00B6BE;
+    width: 20em;
+    height: 3em;
+    background: #00B6BE;
+    text-align: center;
+}
+
+.title span{
+    color: white;
+    font-size: 36px;
+    font-family: 'arial black';
+    position: inline-block;
+    height: 1.18em;
+    white: 17em;
+    text-shadow:1px 1px 0px #000, -1px -1px 0px #000;
+
+}

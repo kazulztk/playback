@@ -81,9 +81,10 @@
     left: 0;
     width: 30px;
     height: 2px;
-    background-color: black;
+    background-color: #00B6BE;;
     border-radius: 4px;
     transition: all .5s;
+    
   }
   .toggle_btn span:nth-child(1) {
     top: 4px;
@@ -95,7 +96,7 @@
     bottom: 4px;
   }
   .open .toggle_btn span {
-    background-color: #fff;
+    background-color: #00B6BE;;
   }
   .open .toggle_btn {
     -webkit-transform: rotate(360deg);

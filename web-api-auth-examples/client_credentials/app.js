@@ -8,9 +8,10 @@
  */
 
 var request = require('request'); // "Request" library
+require('dotenv').config();
 
-var client_id = 'client_id'; // Your client id
-var client_secret = 'client_secret'; // Your secret
+var client_id = process.env.client_id; // Your client id
+var client_secret = process.env.client_secret;// Your secret
 
 // your application requests authorization
 var authOptions = {
